@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="一叶菩提">
 <meta property="og:description" content="我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。   JNDI 来自维基百科的定义:   Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-27T04:54:37.015Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/26/JNDI、DBCP、C3P0之间的-误解/dataSourceJndi.png">
+<meta property="og:updated_time" content="2018-05-27T05:24:54.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JNDI、DBCP、C3P0之间的&quot;误解&quot;">
 <meta name="twitter:description" content="我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。   JNDI 来自维基百科的定义:   Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/26/JNDI、DBCP、C3P0之间的-误解/dataSourceJndi.png">
 
 
 
@@ -311,7 +313,7 @@
 
       
         <p>我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。  </p>
-<h2 id="JNDI"><a href="#JNDI" class="headerlink" title="JNDI"></a>JNDI</h2><p><strong> 来自维基百科的定义: </strong> <em> Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面（API），它提供一个目录系统，并将服务名称与对象关联起来，从而使得开发人员在开发过程中可以使用名称来访问对象。 </em><br><a id="more"></a>通过上面的描述，我们可以简要的理解为：JNDI实际上就是java提供的一种规范，只要你按照guifan</p>
+<h2 id="JNDI"><a href="#JNDI" class="headerlink" title="JNDI"></a>JNDI</h2><p><strong> 来自维基百科的定义: </strong> <em> Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面（API），它提供一个目录系统，并将服务名称与对象关联起来，从而使得开发人员在开发过程中可以使用名称来访问对象。 </em><br><a id="more"></a>通过上面的描述，我们可以简要的理解为：JNDI实际上就是java提供的一种规范，实现的功能就是服务的名称和对象之间的桥梁，应用程序可以通过JNDI来获取对应的资源。具体到数据库连接，那么数据库资源（数据源）就是一个服务（资源），那么应用程序如何获取它呢？那么，JNDI就是一个不错的选择。如图1所示，就是一个数据源的配置文件：<br><img src="/2018/05/26/JNDI、DBCP、C3P0之间的-误解/dataSourceJndi.png" alt="数据源配置"></p>
 
       
     </div>
