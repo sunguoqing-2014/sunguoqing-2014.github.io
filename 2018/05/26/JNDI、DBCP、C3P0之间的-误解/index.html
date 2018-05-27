@@ -88,7 +88,7 @@
 <meta property="og:description" content="我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。   JNDI 来自维基百科的定义:   Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/05/26/JNDI、DBCP、C3P0之间的-误解/dataSourceJndi.png">
-<meta property="og:updated_time" content="2018-05-27T06:12:37.816Z">
+<meta property="og:updated_time" content="2018-05-27T06:22:48.676Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JNDI、DBCP、C3P0之间的&quot;误解&quot;">
 <meta name="twitter:description" content="我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。   JNDI 来自维基百科的定义:   Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面">
@@ -328,7 +328,7 @@
 <li>当客户端使用惰性但通用的资源管理策略，只清理他们的连接时，语句和结果集将被仔细清理，以防止资源耗尽。</li>
 <li>该库采用JDBC 2和3规范定义的方法（即使这些方法与图书馆作者的偏好发生冲突）。数据源是以JavaBean的风格编写的，提供了所有必需的和大部分可选属性（以及一些非标准的属性）和无arg构造函数。所有jdbc定义的内部接口都实现了（ConnectionPoolDataSource、PooledConnection、connectionevent生成连接等等），您可以将c3p0类与兼容的第三方实现混合在一起（尽管并非所有c3p0特性都将与C的外部实现一起工作。</li>
 </ul>
-<p>通过上面的描述，我们可以看到，</p>
+<p>通过上面的描述，我们可以看到，DBCP是作为一个数据库连接池，对数据库连接进行管理。那么，C3P0是为企业应用提供数据源，同样的，通过官网说明，它也是可以设置“ConnectPool DateSource”。那么，回到主题，这三者之间到底有什么误解呢？其实就是JNDI就是获取服务（资源）的一种实现方式，那么这些资源是什么？那么就是下面提到的DPCP、C3P0甚至于阿里出的Druid。三者之间并不是并列的关系，所以也就不存在它们三个之间的区别是什么之类的问题。</p>
 
       
     </div>
