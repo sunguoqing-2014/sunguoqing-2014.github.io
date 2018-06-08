@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="计算机," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,20 +79,17 @@
 
 
 
-<meta name="description" content="我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。   JNDI 来自维基百科的定义:   Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面">
-<meta name="keywords" content="计算机">
+<meta name="description" content="测试文档">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JNDI、DBCP、C3P0之间的&quot;误解&quot;">
-<meta property="og:url" content="http://sun2013gq.xin/2018/05/26/JNDI、DBCP、C3P0之间的-误解/index.html">
+<meta property="og:title" content="测试">
+<meta property="og:url" content="http://sun2013gq.xin/2018/06/09/试-1/index.html">
 <meta property="og:site_name" content="一叶菩提">
-<meta property="og:description" content="我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。   JNDI 来自维基百科的定义:   Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面">
+<meta property="og:description" content="测试文档">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://sun2013gq.xin/2018/05/26/JNDI、DBCP、C3P0之间的-误解/dataSourceJndi.png">
-<meta property="og:updated_time" content="2018-05-27T06:22:48.676Z">
+<meta property="og:updated_time" content="2018-06-08T23:03:49.573Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JNDI、DBCP、C3P0之间的&quot;误解&quot;">
-<meta name="twitter:description" content="我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。   JNDI 来自维基百科的定义:   Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面">
-<meta name="twitter:image" content="http://sun2013gq.xin/2018/05/26/JNDI、DBCP、C3P0之间的-误解/dataSourceJndi.png">
+<meta name="twitter:title" content="测试">
+<meta name="twitter:description" content="测试文档">
 
 
 
@@ -122,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://sun2013gq.xin/2018/05/26/JNDI、DBCP、C3P0之间的-误解/"/>
+  <link rel="canonical" href="http://sun2013gq.xin/2018/06/09/试-1/"/>
 
 
 
 
 
-  <title>JNDI、DBCP、C3P0之间的"误解" | 一叶菩提</title>
+  <title>测试 | 一叶菩提</title>
   
 
 
@@ -245,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sun2013gq.xin/2018/05/26/JNDI、DBCP、C3P0之间的-误解/">
+    <link itemprop="mainEntityOfPage" href="http://sun2013gq.xin/2018/06/09/试-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="孙国庆">
@@ -262,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JNDI、DBCP、C3P0之间的"误解"</h1>
+          <h1 class="post-title" itemprop="name headline">测试</h1>
         
 
         <div class="post-meta">
@@ -274,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-26T20:51:46+08:00">
-                2018-05-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-09T07:03:44+08:00">
+                2018-06-09
               </time>
             
 
@@ -314,23 +311,7 @@
       
 
       
-        <p>我们日常的开发过程当中，许多人对”JNDI”、”DBCP”、”C3P0”傻傻分不清，经常将这三者混为一谈。其实是对这三者之间的概念不了解导致的，所以今天从概念的角度，来理解下这三者，进而消除三者之间的”误会”。  </p>
-<h2 id="JNDI"><a href="#JNDI" class="headerlink" title="JNDI"></a>JNDI</h2><p><strong> 来自维基百科的定义: </strong> <em> Java命名和目录接口（Java Naming and Directory Interface，缩写JNDI），是Java的一个目录服务应用程序界面（API），它提供一个目录系统，并将服务名称与对象关联起来，从而使得开发人员在开发过程中可以使用名称来访问对象。 </em><br><a id="more"></a>通过上面的描述，我们可以简要的理解为：JNDI实际上就是java提供的一种规范，实现的功能就是服务的名称和对象之间的桥梁，应用程序可以通过JNDI来获取对应的资源。具体到数据库连接，那么数据库资源（数据源）就是一个服务（资源），那么应用程序如何获取它呢？那么，JNDI就是一个不错的选择。如图1所示，就是一个数据源的配置文件：<br><img src="/2018/05/26/JNDI、DBCP、C3P0之间的-误解/dataSourceJndi.png" alt="数据源配置"></p>
-<h2 id="DBCP"><a href="#DBCP" class="headerlink" title="DBCP"></a>DBCP</h2><p>DBCP，通过其官网可以查询到，它实际上就是Database Connection Pools 的缩写，翻译过来就是“数据库连接池”，至于数据库连接池是个神马，这里简单的、通俗的描述一下。应用在和数据库交互的时候，需要建立起连接，那么每一次的交互都需要建立起一次连接。但是，数据库连接从资源的角度来看，他是有限的，总不能每一次的交互都建立连接，那么有限的资源必定被很快的耗尽。如何解决这个问题？那么数据库连接池就出现了。大体的思路就是：“我创建一定数量的数据库连接放到一个池子里面，那么应用在运行的过程当中，有需要数据库连接资源的时候，那么就来这个池子里拿，那么用完后再放到池子里面，这样就实现了数据库连接资源的重复利用。  </p>
-<h2 id="C3P0"><a href="#C3P0" class="headerlink" title="C3P0"></a>C3P0</h2><p>那么，C3P0在其官网上是如何定义的呢？  </p>
-<p>c3p0是一个易于使用的库，它可以通过jdbc3规范定义的功能和jdbc2的可选扩展来增强传统JDBC驱动程序的“企业级”功能。在0.9.5版本中，c3p0完全支持jdbc4规范。</p>
-<p>尤其是，c3p0提供了一些有用的服务：</p>
-<ul>
-<li>一个类whichs将传统的驱动程序驱动的JDBC驱动程序调整到新的javax.sql。获取数据库连接的数据源方案。</li>
-<li>透明的连接和准备语句在数据源后面，可以“包装”在传统的驱动程序或任意的未集中的数据源上。</li>
-</ul>
-<p>文档努力的把细节弄清楚：</p>
-<ul>
-<li>c3p0数据源都是可引用的和可序列化的，因此适合绑定到各种基于jndi的命名服务。</li>
-<li>当客户端使用惰性但通用的资源管理策略，只清理他们的连接时，语句和结果集将被仔细清理，以防止资源耗尽。</li>
-<li>该库采用JDBC 2和3规范定义的方法（即使这些方法与图书馆作者的偏好发生冲突）。数据源是以JavaBean的风格编写的，提供了所有必需的和大部分可选属性（以及一些非标准的属性）和无arg构造函数。所有jdbc定义的内部接口都实现了（ConnectionPoolDataSource、PooledConnection、connectionevent生成连接等等），您可以将c3p0类与兼容的第三方实现混合在一起（尽管并非所有c3p0特性都将与C的外部实现一起工作。</li>
-</ul>
-<p>通过上面的描述，我们可以看到，DBCP是作为一个数据库连接池，对数据库连接进行管理。那么，C3P0是为企业应用提供数据源，同样的，通过官网说明，它也是可以设置“ConnectPool DateSource”。那么，回到主题，这三者之间到底有什么误解呢？其实就是JNDI就是获取服务（资源）的一种实现方式，那么这些资源是什么？那么就是下面提到的DPCP、C3P0甚至于阿里出的Druid。三者之间并不是并列的关系，所以也就不存在它们三个之间的区别是什么之类的问题。</p>
+        <p>测试文档</p>
 
       
     </div>
@@ -346,12 +327,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/计算机/" rel="tag"># 计算机</a>
-          
-        </div>
-      
 
       
       
@@ -361,8 +336,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/15/曾经的你/" rel="next" title="曾经的你">
-                <i class="fa fa-chevron-left"></i> 曾经的你
+              <a href="/2018/05/26/JNDI、DBCP、C3P0之间的-误解/" rel="next" title="JNDI、DBCP、C3P0之间的"误解"">
+                <i class="fa fa-chevron-left"></i> JNDI、DBCP、C3P0之间的"误解"
               </a>
             
           </div>
@@ -370,10 +345,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/09/试-1/" rel="prev" title="测试">
-                测试 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -425,17 +396,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -506,22 +468,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JNDI"><span class="nav-number">1.</span> <span class="nav-text">JNDI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DBCP"><span class="nav-number">2.</span> <span class="nav-text">DBCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C3P0"><span class="nav-number">3.</span> <span class="nav-text">C3P0</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
