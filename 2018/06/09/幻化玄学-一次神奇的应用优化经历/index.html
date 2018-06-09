@@ -83,11 +83,11 @@
 <meta name="keywords" content="计算机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="幻化玄学-一次神奇的应用优化经历">
-<meta property="og:url" content="http://sun2013gq.xin/2018/06/09/-1/index.html">
+<meta property="og:url" content="http://sun2013gq.xin/2018/06/09/幻化玄学-一次神奇的应用优化经历/index.html">
 <meta property="og:site_name" content="一叶菩提">
 <meta property="og:description" content="我所在的公司在几年前承担了某集团公司的门户单点功能的实现。当时的业务需求是大概5000用户的数据量，经过几年的发展，现在公司用户量提升至20000，导致的问题就是应用时不时的发生宕机的问题，那么接下来的需求就是如何优化当前的应用，以满足客户的需求。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-09T02:01:43.720Z">
+<meta property="og:updated_time" content="2018-06-09T02:42:02.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="幻化玄学-一次神奇的应用优化经历">
 <meta name="twitter:description" content="我所在的公司在几年前承担了某集团公司的门户单点功能的实现。当时的业务需求是大概5000用户的数据量，经过几年的发展，现在公司用户量提升至20000，导致的问题就是应用时不时的发生宕机的问题，那么接下来的需求就是如何优化当前的应用，以满足客户的需求。">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://sun2013gq.xin/2018/06/09/-1/"/>
+  <link rel="canonical" href="http://sun2013gq.xin/2018/06/09/幻化玄学-一次神奇的应用优化经历/"/>
 
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sun2013gq.xin/2018/06/09/-1/">
+    <link itemprop="mainEntityOfPage" href="http://sun2013gq.xin/2018/06/09/幻化玄学-一次神奇的应用优化经历/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="孙国庆">
@@ -313,6 +313,11 @@
 
       
         <p>我所在的公司在几年前承担了某集团公司的门户单点功能的实现。当时的业务需求是大概5000用户的数据量，经过几年的发展，现在公司用户量提升至20000，导致的问题就是应用时不时的发生宕机的问题，那么接下来的需求就是如何优化当前的应用，以满足客户的需求。<a id="more"></a></p>
+<p>通过对宕机日志以及服务器在宕机时刻情况的分析，大概的问题点就是由于每个用户登录后进行一次页面的后端请求，且应用没有进行前后端的分离。所有每次刷新页面都会向服务器发送大量的请求，同时，由于应用设计的原因，每次的请求同时又至少要与数据库发送至少3次的连接，一旦用户集中在某个时刻，集中的访问门户网站，则很容易造成服务器宕机。</p>
+<p>那么，接下来来看是如何一步一步的实现该应用的优化过程的。</p>
+<ul>
+<li>第一次优化，当务之急就是解决服务器宕机的问题，那么首先就是前后端分离，将静态页面缓存至Nginx，通过ajax请求后台数据。同时减少与数据库的连接次数，之前是对多张表进行查询，然后返回查询结果。每一次的查询至少增加一次的数据库连接，这样数据库的压力也必然增大。那么，我们就减少数据库的压力，方法就是将多张表的查询转化为对视图的查询，这样只需要查询一次，就可以获取导数据。</li>
+</ul>
 
       
     </div>
